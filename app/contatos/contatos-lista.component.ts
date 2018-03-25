@@ -10,7 +10,11 @@ import { DialogService } from './dialog.service';
     templateUrl: 'contatos-lista.component.html'
 })
 export class ContatosListaComponent implements OnInit {
-    contatos : Contato[];
+
+    contatos : Contato[] = [];
+    mensagem: {};
+    classesCss: {};
+    private currentTimeout:any;
 
     constructor(
         private contatoService: ContatoService,
@@ -21,7 +25,13 @@ export class ContatosListaComponent implements OnInit {
     this.contatoService.getContatos()        
         .then((contatos:Contato[]) => {
             this.contatos = contatos;
-        }).catch(err => console.log(err));
+        }).catch(err => {
+            console.log(err)
+            this.mostrarMensagem({
+                tipo: 'danger',
+                texto: 'Ocorreu um erro ao mostrar a lista de contato!'
+            });
+        });
     }
 
     onDelete(contato:Contato):void{
@@ -34,10 +44,39 @@ export class ContatosListaComponent implements OnInit {
                             
                             this.contatos = this.contatos.filter(c => c.id != contato.id);
 
+                            this.mostrarMensagem({
+                                tipo: 'success',
+                                texto: 'Contato deletado!'
+                            });
                         }).catch(err => {
-                            console.log(err);
+                            this.mostrarMensagem({
+                                tipo: 'danger',
+                                texto: 'Ocorreu um erro ao deletar contato!'
+                            });
                         })
                 }
             });
+    }
+
+    private mostrarMensagem(mensagem: {tipo: string, texto: string}): void{
+        this.mensagem = mensagem;
+        this.montarClasses(mensagem.tipo);
+        if(mensagem.tipo != 'danger'){
+
+            if(this.currentTimeout){
+                clearTimeout(this.currentTimeout);
+            }
+
+            this.currentTimeout = setTimeout(() => {
+                this.mensagem = undefined;
+            }, 3000);
+        }
+    }
+
+    private montarClasses(tipo: string): void {
+        this.classesCss = {
+            'alert': true
+        }
+        this.classesCss['alert-'+tipo] = true;
     }
 }

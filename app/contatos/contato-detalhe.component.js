@@ -56,7 +56,10 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
         else {
             promisse = this.contatoService.update(this.contato);
         }
-        promisse.then(contato => this.location.back());
+        promisse.then(contato => this.goBack());
+    }
+    goBack() {
+        this.location.back();
     }
 };
 ContatoDetalheComponent = __decorate([
