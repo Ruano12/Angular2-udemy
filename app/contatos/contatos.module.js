@@ -9,6 +9,7 @@ const core_1 = require("@angular/core");
 const common_1 = require("@angular/common");
 <<<<<<< HEAD
 const forms_1 = require("@angular/forms");
+const contato_busca_component_1 = require("./contato-busca.component");
 const contato_detalhe_component_1 = require("./contato-detalhe.component");
 const contatos_lista_component_1 = require("./contatos-lista.component");
 const contato_routing_module_1 = require("./contato-routing.module");
@@ -32,10 +33,12 @@ ContatosModule = __decorate([
 >>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
         ],
         declarations: [
+            contato_busca_component_1.ContatoBuscaComponent,
             contato_detalhe_component_1.ContatoDetalheComponent,
             contatos_lista_component_1.ContatosListaComponent
         ],
         exports: [
+            contato_busca_component_1.ContatoBuscaComponent,
             contatos_lista_component_1.ContatosListaComponent
         ],
 <<<<<<< HEAD

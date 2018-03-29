@@ -1,6 +1,12 @@
+import './util/rxJsExtesions';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { FormsModule } from '@angular/forms';
+>>>>>>> 3f1567d812151143adc262873b301b5341d77c57
 import { HttpModule }  from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { inMemoryDataService } from './in-memory-data.service';
@@ -22,6 +28,7 @@ import { ContatosModule } from './contatos/contatos.module';
         BrowserModule, 
 <<<<<<< HEAD
         ContatosModule,
+        FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(inMemoryDataService)
     ],
