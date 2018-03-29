@@ -1,6 +1,7 @@
 <div class="container">
     <h2>Salvar contato</h2>
 
+<<<<<<< HEAD
     <form (ngSubmit)="onSubmit()" #contatoForm="ngForm" novaValidate>
 
         <div [ngClass]="getFormGroupClass(nome.valid, nome.pristine)">
@@ -31,6 +32,21 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-success" [disabled]="!contatoForm.form.valid">Salvar</button>
+=======
+    <form>
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" placeholder="Insira o nome">
+
+            <label for="email">Email</label>
+            <input type="email" class="form-control" placeholder="Insira o email">
+
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" placeholder="Insira o telefone">
+        
+            <button type="submit" class="btn btn-success">Salvar</button>
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
             <a routerLink="/" class="btn btn-secondary">Voltar</a>
         </div>
 

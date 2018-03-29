@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { ContatoService } from './contato.service';
 import { Contato } from './contato.model';
+=======
+import { Component } from '@angular/core';
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
 
 @Component({
     moduleId: module.id,
     selector: 'contato-detalhe',
     templateUrl: 'contato-detalhe.component.html'
+<<<<<<< HEAD
     /*styles:[`
             .ng-valid[required]{
                 border: 1px solid green;
@@ -73,3 +78,7 @@ export class ContatoDetalheComponent implements OnInit {
         promisse.then(contato => this.location.back());
     }
 }
+=======
+})
+export class ContatoDetalheComponent {}
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a

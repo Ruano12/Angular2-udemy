@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 
 import { Contato } from './contato.model';
 import { ContatoService } from './contato.service';
 import { DialogService } from './dialog.service';
+=======
+import { Component } from '@angular/core';
+
+import { CONTATOS } from './contatos-mock'
+import { Contato } from './contato.model';
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
 
 @Component({
     moduleId: module.id,
     selector: 'contatos-lista',
+<<<<<<< HEAD
     templateUrl: 'contatos-lista.component.html'
 })
 export class ContatosListaComponent implements OnInit {
@@ -40,4 +48,10 @@ export class ContatosListaComponent implements OnInit {
                 }
             });
     }
+=======
+    templateUrl: 'contatos-lista.component.html',
+})
+export class ContatosListaComponent {
+    contatos : Contato[] = CONTATOS;
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
 }

@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+<<<<<<< HEAD
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
@@ -34,16 +35,28 @@ let ContatosListaComponent = class ContatosListaComponent {
                 });
             }
         });
+=======
+const core_1 = require("@angular/core");
+const contatos_mock_1 = require("./contatos-mock");
+let ContatosListaComponent = class ContatosListaComponent {
+    constructor() {
+        this.contatos = contatos_mock_1.CONTATOS;
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
     }
 };
 ContatosListaComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'contatos-lista',
+<<<<<<< HEAD
         templateUrl: 'contatos-lista.component.html'
     }),
     __metadata("design:paramtypes", [contato_service_1.ContatoService,
         dialog_service_1.DialogService])
+=======
+        templateUrl: 'contatos-lista.component.html',
+    })
+>>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
 ], ContatosListaComponent);
 exports.ContatosListaComponent = ContatosListaComponent;
 //# sourceMappingURL=contatos-lista.component.js.map
