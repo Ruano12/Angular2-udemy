@@ -8,11 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 require("./util/rxJsExtesions");
 const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const forms_1 = require("@angular/forms");
->>>>>>> 3f1567d812151143adc262873b301b5341d77c57
 const http_1 = require("@angular/http");
 const angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 const in_memory_data_service_1 = require("./in-memory-data.service");
@@ -20,11 +15,6 @@ const app_component_1 = require("./app.component");
 const app_routing_module_1 = require("./app-routing.module");
 const contatos_module_1 = require("./contatos/contatos.module");
 const dialog_service_1 = require("./contatos/dialog.service");
-=======
-const app_component_1 = require("./app.component");
-const app_routing_module_1 = require("./app-routing.module");
-const contatos_module_1 = require("./contatos/contatos.module");
->>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
 let appModule = class appModule {
 };
 appModule = __decorate([
@@ -32,19 +22,13 @@ appModule = __decorate([
         imports: [
             app_routing_module_1.AppRoutingModule,
             platform_browser_1.BrowserModule,
-<<<<<<< HEAD
             contatos_module_1.ContatosModule,
-            forms_1.FormsModule,
+            FormsModule,
             http_1.HttpModule,
             angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.inMemoryDataService)
         ],
         declarations: [app_component_1.AppComponent],
         providers: [dialog_service_1.DialogService],
-=======
-            contatos_module_1.ContatosModule
-        ],
-        declarations: [app_component_1.AppComponent],
->>>>>>> a04036fac3d982ec865665824307f12478cc4f7a
         bootstrap: [app_component_1.AppComponent]
     })
 ], appModule);
